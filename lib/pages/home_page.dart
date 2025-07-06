@@ -1,4 +1,5 @@
 import 'package:my_portfolio/sections/about_section.dart';
+import 'package:my_portfolio/sections/footer_section.dart';
 import 'package:my_portfolio/sections/project_section.dart';
 import 'package:my_portfolio/widgets/hidden_scroll.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
@@ -21,6 +22,8 @@ class HomePage extends StatelessWidget {
               Divider(),
               Gap(64),
               ProjectSection(),
+              Gap(64),
+              FooterSection(),
             ],
           ),
         ),
