@@ -5,17 +5,35 @@ class AboutTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 600;
+
     return WrappedText(
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text('Hi, I\'m'),
-          Text(
-            ' Edwing Vera',
-            style: TextStyle(color: Theme.of(context).colorScheme.primary),
-          ),
-        ],
-      ),
+      child:
+          isMobile
+              ? Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('Hi, I\'m'),
+                  Text(
+                    ' Edwing Vera',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  ),
+                ],
+              )
+              : Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('Hi, I\'m'),
+                  Text(
+                    ' Edwing Vera',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  ),
+                ],
+              ),
     ).x4Large.bold.mono.inlineCode;
   }
 }
