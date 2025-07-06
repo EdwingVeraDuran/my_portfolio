@@ -1,16 +1,23 @@
-# my_portfolio
+# My Portfolio
 
-A new Flutter project.
+A minimal portfolio website built with Flutter to showcase my projects and work.
 
-## Getting Started
+![Screenshot of portfolio](assets/screenshots/preview.png)
 
-This project is a starting point for a Flutter application.
+## ✨ About
 
-A few resources to get you started if this is your first Flutter project:
+Hi, I'm **Edwing Vera**, a civil engineering student who enjoys building simple and clean applications using **Flutter** and **Python**.  
+This is a personal portfolio to highlight my projects and some side experiments.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Minimal responsive design
+- Projects showcase
+- GitHub integration (Future)
+- Clean and modular Flutter code
+
+## 🧠 Tech Stack
+
+- [Flutter](https://flutter.dev/)
+- [shadcn_flutter](https://pub.dev/packages/shadcn_flutter)
+- [url_launcher](https://pub.dev/packages/url_launcher)
