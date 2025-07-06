@@ -1,5 +1,5 @@
 name: my_portfolio
-description: "A new Flutter project."
+description: "A minimal portfolio website built with Flutter to showcase my projects and work."
 publish_to: 'none'
 
 version: 1.0.0+1
