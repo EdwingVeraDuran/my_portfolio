@@ -12,7 +12,7 @@ class ProjectSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [SectionTitle(), Gap(64), ProjectsDisplay(data)],
+      children: [SectionTitle('Projects'), Gap(64), ProjectsDisplay(data)],
     );
   }
 }
