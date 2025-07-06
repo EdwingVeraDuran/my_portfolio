@@ -1,4 +1,5 @@
 import 'package:my_portfolio/sections/about_section.dart';
+import 'package:my_portfolio/sections/project_section.dart';
 import 'package:my_portfolio/widgets/hidden_scroll.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
@@ -14,7 +15,13 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 48, vertical: 64),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [AboutSection(), Gap(64), Divider()],
+            children: [
+              AboutSection(),
+              Gap(64),
+              Divider(),
+              Gap(64),
+              ProjectSection(),
+            ],
           ),
         ),
       ),
