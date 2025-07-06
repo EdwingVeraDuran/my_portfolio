@@ -1,5 +1,6 @@
 import 'package:my_portfolio/models/project.dart';
 import 'package:my_portfolio/util/url_helper.dart';
+import 'package:my_portfolio/widgets/url_button.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class ProjectCard extends StatelessWidget {
@@ -20,15 +21,9 @@ class ProjectCard extends StatelessWidget {
                 Gap(16),
                 Text(project.title).mono.large,
                 Spacer(),
-                IconButton.outline(
-                  icon: Icon(LucideIcons.download),
-                  onPressed: () => UrlHelper.launch(project.url, true),
-                ),
+                UrlButton(project.url),
                 Gap(8),
-                IconButton.outline(
-                  icon: Icon(LucideIcons.github),
-                  onPressed: () => UrlHelper.launch(project.url),
-                ),
+                UrlButton(project.url, isDownload: true),
               ],
             ),
             Text(project.description).p.mono,
