@@ -12,7 +12,6 @@ dependencies:
     sdk: flutter
 
   url_launcher: ^6.3.1
-  google_fonts: ^6.2.1
   shadcn_flutter: ^0.0.36
 
 dev_dependencies:
