@@ -1,22 +1,10 @@
 import 'package:my_portfolio/models/project.dart';
+import 'package:my_portfolio/util/url_helper.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatelessWidget {
   final Project project;
   const ProjectCard(this.project, {super.key});
-
-  void _launchUrl(String url, [bool isRelease = false]) async {
-    final baseUri = Uri.parse(url);
-    final finalUri =
-        isRelease ? baseUri.replace(path: '${baseUri.path}/releases') : baseUri;
-
-    if (await canLaunchUrl(finalUri)) {
-      await launchUrl(finalUri);
-    } else {
-      debugPrint('Could not launch URL: $finalUri');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +22,12 @@ class ProjectCard extends StatelessWidget {
                 Spacer(),
                 IconButton.outline(
                   icon: Icon(LucideIcons.download),
-                  onPressed: () => _launchUrl(project.url, true),
+                  onPressed: () => UrlHelper.launch(project.url, true),
                 ),
                 Gap(8),
                 IconButton.outline(
                   icon: Icon(LucideIcons.github),
-                  onPressed: () => _launchUrl(project.url),
+                  onPressed: () => UrlHelper.launch(project.url),
                 ),
               ],
             ),
