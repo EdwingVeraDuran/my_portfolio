@@ -1,5 +1,7 @@
 sealed class LoginEvent {}
 
+class CheckAuthStatusEvent extends LoginEvent {}
+
 class LoginSubmitEvent extends LoginEvent {
   final String email;
   final String password;

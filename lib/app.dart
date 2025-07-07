@@ -14,7 +14,7 @@ class PortfolioApp extends StatelessWidget {
       child: ShadcnApp.router(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(colorScheme: ColorSchemes.darkGreen(), radius: 1),
-        routerConfig: appRouter,
+        routerConfig: createAppRouter(getIt<LoginBloc>()),
       ),
     );
   }
