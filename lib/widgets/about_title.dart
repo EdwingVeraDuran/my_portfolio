@@ -12,10 +12,11 @@ class AboutTitle extends StatelessWidget {
           isMobile
               ? Column(
                 mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text('Hi, I\'m'),
                   Text(
-                    ' Edwing Vera',
+                    'Edwing Vera',
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.primary,
                     ),

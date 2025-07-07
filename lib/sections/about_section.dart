@@ -18,7 +18,7 @@ class AboutSection extends StatelessWidget {
                 'I\'m a civil engineering student who enjoys coding in Python and Flutter. '
                 'This is a minimal portfolio to showcase my projects and side work.',
                 textAlign: TextAlign.center,
-              ).xLarge.mono.medium.italic,
+              ).large.mono.medium.italic,
         ),
       ],
     );
