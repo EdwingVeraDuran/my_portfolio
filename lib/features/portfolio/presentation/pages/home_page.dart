@@ -1,7 +1,7 @@
 import 'package:my_portfolio/features/portfolio/presentation/sections/about_section.dart';
 import 'package:my_portfolio/features/portfolio/presentation/sections/footer_section.dart';
 import 'package:my_portfolio/features/portfolio/presentation/sections/project_section.dart';
-import 'package:my_portfolio/features/portfolio/presentation/widgets/hidden_scroll.dart';
+import 'package:my_portfolio/core/shared/widgets/hidden_scroll.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class HomePage extends StatelessWidget {

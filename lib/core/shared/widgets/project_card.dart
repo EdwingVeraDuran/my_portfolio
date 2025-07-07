@@ -1,12 +1,15 @@
 import 'package:my_portfolio/core/models/project.dart';
 import 'package:my_portfolio/core/models/project_status.dart';
-import 'package:my_portfolio/features/portfolio/presentation/widgets/info_chip.dart';
+import 'package:my_portfolio/core/shared/widgets/info_chip.dart';
+import 'package:my_portfolio/features/admin_panel/presentation/widgets/delete_button.dart';
+import 'package:my_portfolio/features/admin_panel/presentation/widgets/view_button.dart';
 import 'package:my_portfolio/features/portfolio/presentation/widgets/url_button.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class ProjectCard extends StatelessWidget {
   final Project project;
-  const ProjectCard(this.project, {super.key});
+  final bool isAdmin;
+  const ProjectCard(this.project, {super.key, this.isAdmin = false});
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +26,15 @@ class ProjectCard extends StatelessWidget {
                 Gap(16),
                 Text(project.title).mono.large,
                 Spacer(),
-                UrlButton(project.url),
-                Gap(8),
-                UrlButton(project.url, isDownload: true),
+                if (isAdmin) ...[
+                  ViewButton(1),
+                  Gap(8),
+                  DeleteButton(),
+                ] else ...[
+                  UrlButton(project.url),
+                  Gap(8),
+                  UrlButton(project.url, isDownload: true),
+                ],
               ],
             ),
             Gap(16),
