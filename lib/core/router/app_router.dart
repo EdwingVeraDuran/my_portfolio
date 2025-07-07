@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/core/pages/not_found_page.dart';
 import 'package:my_portfolio/features/admin_panel/presentation/pages/admin_page.dart';
+import 'package:my_portfolio/features/admin_panel/presentation/pages/project_details_page.dart';
 import 'package:my_portfolio/features/login/presentation/bloc/login_bloc.dart';
 import 'package:my_portfolio/features/login/presentation/pages/login_page.dart';
 import 'package:my_portfolio/features/portfolio/presentation/pages/home_page.dart';
@@ -9,16 +10,11 @@ import 'package:my_portfolio/features/portfolio/presentation/pages/home_page.dar
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
   redirect: (context, state) {
-    final validRoutes = ['/', '/login', '/admin', '/404'];
+    final loggingIn = state.matchedLocation == '/login';
+    final isAuthenticated = context.read<LoginBloc>().isAuthenticated;
+    final isAdminRoute = state.matchedLocation.startsWith('/admin');
 
-    if (!validRoutes.contains(state.uri.path)) {
-      return '/404';
-    }
-
-    final loggingIn = state.fullPath == '/login';
-    bool isAuthenticated = context.read<LoginBloc>().isAuthenticated;
-
-    if (!isAuthenticated && !loggingIn && state.fullPath == '/admin') {
+    if (!isAuthenticated && !loggingIn && isAdminRoute) {
       return '/login';
     }
 
@@ -39,6 +35,14 @@ final GoRouter appRouter = GoRouter(
       path: '/admin',
       name: 'admin',
       builder: (context, state) => const AdminPage(),
+    ),
+    GoRoute(
+      path: '/admin/projects/:id',
+      name: 'projectDetails',
+      builder: (context, state) {
+        final id = state.pathParameters['id'];
+        return ProjectDetailsPage(projectId: int.parse(id!));
+      },
     ),
     GoRoute(
       path: '/404',
