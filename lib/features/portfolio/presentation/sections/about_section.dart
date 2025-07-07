@@ -1,4 +1,4 @@
-import 'package:my_portfolio/widgets/about_title.dart';
+import 'package:my_portfolio/features/portfolio/presentation/widgets/about_title.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class AboutSection extends StatelessWidget {

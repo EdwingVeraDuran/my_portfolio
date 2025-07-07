@@ -1,7 +1,7 @@
-import 'package:my_portfolio/models/project.dart';
-import 'package:my_portfolio/models/project_status.dart';
-import 'package:my_portfolio/widgets/info_chip.dart';
-import 'package:my_portfolio/widgets/url_button.dart';
+import 'package:my_portfolio/core/models/project.dart';
+import 'package:my_portfolio/core/models/project_status.dart';
+import 'package:my_portfolio/features/portfolio/presentation/widgets/info_chip.dart';
+import 'package:my_portfolio/features/portfolio/presentation/widgets/url_button.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class ProjectCard extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:my_portfolio/models/project_status.dart';
-import 'package:my_portfolio/models/tech.dart';
+import 'package:my_portfolio/core/models/project_status.dart';
+import 'package:my_portfolio/core/models/tech.dart';
 
 class Project {
   final String title;

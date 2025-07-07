@@ -1,4 +1,4 @@
-import 'package:my_portfolio/pages/home_page.dart';
+import 'package:my_portfolio/features/portfolio/presentation/pages/home_page.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 void main() {

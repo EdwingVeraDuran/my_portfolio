@@ -1,5 +1,5 @@
-import 'package:my_portfolio/models/project.dart';
-import 'package:my_portfolio/widgets/project_card.dart';
+import 'package:my_portfolio/core/models/project.dart';
+import 'package:my_portfolio/features/portfolio/presentation/widgets/project_card.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class ProjectsDisplay extends StatelessWidget {

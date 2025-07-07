@@ -1,4 +1,4 @@
-import 'package:my_portfolio/widgets/url_button.dart';
+import 'package:my_portfolio/features/portfolio/presentation/widgets/url_button.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class FooterSection extends StatelessWidget {

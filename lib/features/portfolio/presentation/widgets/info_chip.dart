@@ -1,4 +1,4 @@
-import 'package:my_portfolio/util/url_helper.dart';
+import 'package:my_portfolio/core/util/url_helper.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
 class InfoChip extends StatelessWidget {
