@@ -17,7 +17,6 @@ final GoRouter appRouter = GoRouter(
 
     final loggingIn = state.fullPath == '/login';
     bool isAuthenticated = context.read<LoginBloc>().isAuthenticated;
-    print(isAuthenticated);
 
     if (!isAuthenticated && !loggingIn && state.fullPath == '/admin') {
       return '/login';
