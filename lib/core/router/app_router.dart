@@ -1,11 +1,10 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/core/pages/not_found_page.dart';
 import 'package:my_portfolio/features/admin_panel/presentation/pages/admin_page.dart';
+import 'package:my_portfolio/features/login/presentation/bloc/login_bloc.dart';
 import 'package:my_portfolio/features/login/presentation/pages/login_page.dart';
 import 'package:my_portfolio/features/portfolio/presentation/pages/home_page.dart';
-
-// add into redirect function with context.read from AuthBloc
-bool isAuthenticated = false;
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
@@ -17,6 +16,8 @@ final GoRouter appRouter = GoRouter(
     }
 
     final loggingIn = state.fullPath == '/login';
+    bool isAuthenticated = context.read<LoginBloc>().isAuthenticated;
+    print(isAuthenticated);
 
     if (!isAuthenticated && !loggingIn && state.fullPath == '/admin') {
       return '/login';
